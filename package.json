@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.1.7",
+    "ldrs": "^1.0.1",
     "next": "14.2.1",
     "pusher": "^5.2.0",
     "pusher-js": "^8.4.0-rc2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "simplex-noise": "^4.0.1",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "eslint": "^8",
