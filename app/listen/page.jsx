@@ -85,12 +85,12 @@ const ListenPage = () => {
 
             <TextGenerateEffect words={words} key={words} className={"m-8"} />
 
-            <button
+            {/* <button
               onClick={simulateSound}
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Test
-            </button>
+            </button> */}
           </BackgroundGradient>
         </main>
       </WavyBackground>
