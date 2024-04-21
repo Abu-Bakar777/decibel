@@ -5,12 +5,12 @@ import Pusher from "pusher-js";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { quantum } from "ldrs";
 
 const ListenPage = () => {
   const [category, setCategory] = useState(null);
   const [imagePath, setImagePath] = useState(null);
   const [words, setWords] = useState("Listening to stream...");
+  const [isBrowser, setIsBrowser] = useState(false);
 
   useEffect(() => {
     var pusher = new Pusher("a23354f7a99fcd36d314", { cluster: "ap2" });
@@ -21,7 +21,7 @@ const ListenPage = () => {
       setCategory(message);
       //   console.log("Meow");
     });
-    quantum.register();
+    setIsBrowser(true);
   }, []);
 
   useEffect(() => {
@@ -49,6 +49,9 @@ const ListenPage = () => {
     return () => clearTimeout(timer);
   }, [words]);
 
+  if (isBrowser) {
+    quantum.register();
+  }
   const simulateSound = () => {
     const categories = ["Applause", "Cry"];
     const randomCategory =
