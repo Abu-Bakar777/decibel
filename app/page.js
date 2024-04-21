@@ -8,7 +8,7 @@ const HomePage = () => {
         Decibel AI
       </p>
       <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
-        Leverage the power of Machine Learning to detect sound and classify it
+        A hearing assistant.
       </p>
 
       <div className="flex justify-center mt-8">
