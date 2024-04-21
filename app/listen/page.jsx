@@ -25,12 +25,49 @@ const ListenPage = () => {
   }, []);
 
   useEffect(() => {
-    if (category === "Applause") {
-      setWords("Detected Applause");
-      setImagePath("/images/clap.png");
-    } else if (category === "Cry") {
-      setWords("Detected Crying");
-      setImagePath("/images/cry.png");
+    switch (category) {
+      case "applause":
+      case "clap":
+        setWords("Detected Applause");
+        setImagePath("/images/clap.png");
+        break;
+      case "Cry":
+        setWords("Detected Crying");
+        setImagePath("/images/cry.png");
+        break;
+      case "alarm":
+        setWords("Detected Alarm");
+        setImagePath("/images/alarm.JPG");
+        break;
+      case "doorbell":
+        setWords("Detected Doorbell");
+        setImagePath("/images/doorbell.JPG");
+        break;
+      case "honk":
+        setWords("Detected Honk");
+        setImagePath("/images/honk.JPG");
+        break;
+      case "music":
+        setWords("Detected Music");
+        setImagePath("/images/music.png");
+        break;
+      case "speech":
+        setWords("Detected Speech");
+        setImagePath("/images/speech.JPG");
+        break;
+      case "siren":
+        setWords("Detected Siren");
+        setImagePath("/images/siren.JPG");
+        break;
+      case "laugh":
+        setWords("Detected Laugh");
+        setImagePath("/images/laugh.JPG");
+      case "water":
+        setWords("Detected Water");
+        setImagePath("/images/water.JPG");
+
+      default:
+        break;
     }
   }, [category]);
 
