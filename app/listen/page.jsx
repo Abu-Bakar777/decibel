@@ -61,7 +61,7 @@ const ListenPage = () => {
       <WavyBackground className="max-w-4xl mx-auto pb-40">
         <header>
           <h1 className="text-center font-bold text-4xl p-4 mb-20 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-white">
-            Decible AI
+            Decibel AI
           </h1>{" "}
         </header>
 
