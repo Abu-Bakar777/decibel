@@ -5,7 +5,6 @@ import Pusher from "pusher-js";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { WavyBackground } from "@/components/ui/wavy-background";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { quantum } from "ldrs";
 
 const ListenPage = () => {
   const [category, setCategory] = useState(null);
@@ -88,6 +87,7 @@ const ListenPage = () => {
   }, [words]);
 
   if (isBrowser) {
+    const { quantum } = require("ldrs");
     quantum.register();
   }
   const simulateSound = () => {
