@@ -65,8 +65,12 @@ const ListenPage = () => {
       case "Water":
         setWords("Detected Water");
         setImagePath("/images/water.JPG");
-
       default:
+        if (category != null) {
+          setWords(`Detected ${category}`);
+          setImagePath(null);
+        }
+
         break;
     }
   }, [category]);
@@ -86,7 +90,9 @@ const ListenPage = () => {
     return () => clearTimeout(timer);
   }, [words]);
 
+  let isDarkTheme = false;
   if (isBrowser) {
+    isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const { quantum } = require("ldrs");
     quantum.register();
   }
@@ -120,7 +126,11 @@ const ListenPage = () => {
               // Default values shown
 
               <div className={"justify-center flex m-10"}>
-                <l-quantum size="150" speed="4.0" color="white"></l-quantum>
+                <l-quantum
+                  size="150"
+                  speed="4.0"
+                  color={isDarkTheme ? "white" : "black"}
+                ></l-quantum>
               </div>
             )}
 
