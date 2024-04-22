@@ -27,8 +27,8 @@ const ListenPage = () => {
 
   useEffect(() => {
     switch (category) {
-      case "applause":
-      case "clap":
+      case "Applause":
+      case "Clap":
         setWords("Detected Applause");
         setImagePath("/images/clap.png");
         break;
@@ -36,34 +36,34 @@ const ListenPage = () => {
         setWords("Detected Crying");
         setImagePath("/images/cry.png");
         break;
-      case "alarm":
+      case "Alarm":
         setWords("Detected Alarm");
         setImagePath("/images/alarm.JPG");
         break;
-      case "doorbell":
+      case "Doorbell":
         setWords("Detected Doorbell");
         setImagePath("/images/doorbell.JPG");
         break;
-      case "honk":
+      case "Honk":
         setWords("Detected Honk");
         setImagePath("/images/honk.JPG");
         break;
-      case "music":
+      case "Music":
         setWords("Detected Music");
         setImagePath("/images/music.png");
         break;
-      case "speech":
+      case "Speech":
         setWords("Detected Speech");
         setImagePath("/images/speech.JPG");
         break;
-      case "siren":
+      case "Siren":
         setWords("Detected Siren");
         setImagePath("/images/siren.JPG");
         break;
-      case "laugh":
+      case "Laugh":
         setWords("Detected Laugh");
         setImagePath("/images/laugh.JPG");
-      case "water":
+      case "Water":
         setWords("Detected Water");
         setImagePath("/images/water.JPG");
 
